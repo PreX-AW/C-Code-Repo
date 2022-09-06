@@ -73,86 +73,87 @@
 
 
 
-//*************************************创建一个整形数组，完成对数组的操作
-//实现函数init() 初始化数组为全0
-//实现print()  打印数组的每个元素
-//实现reverse()  函数完成数组元素的逆置。
-//#include<stdio.h>
-//#define Size 10
-//void init(int arr[], int size);
-//void print(int arr[], int size);
-//void resverse(int arr[], int size);
-//int main() {
-//	int arr[Size];
-//	init(arr, Size);
-//	int i = 0;
-//	while (0 != scanf("%d", arr[i])) {
-//		i++;
-//		if (i >Size-1)
-//			break;
-//	}
-//
-//		
-//
-//	return 0;
-//}
-//void init(int *arr[], int size) {
-//	for (int i = 0; i < size; i++) {
-//		arr[i] = 0;
-//	
-//	}
-//
-//}
-//void print(int arr[], int size) {
-//	for (int i = 0; i < size; i++) {
-//		printf("%d", arr[i]);
-//	
-//	}
-//
-//}
-//void resverse(int arr[], int size) {
-//	int temp = 0;
-//	for (int count = 0; count < size/2; count++) {
-//		temp = arr[count];
-//		arr[count] = arr[size - count];
-//		arr[size - count] = temp;
-//	}
-//
-//
-//
-//}
-
-//******************************冒泡排序(increase/up)*****************************8
+//*************************************创建一个整形数组，完成对数组的操作************************************
+//*************************************实现函数init() 初始化数组为全0***************************************
+//*************************************实现print()  打印数组的每个元素**************************************
+//************************************实现reverse()  函数完成数组元素的逆置。**********************************
 #include<stdio.h>
-void bubble_Up_sort(int arr[], int size);
+#define Size 10
+void init(int arr[], int size);
+void print(int arr[], int size);
+void reverse(int arr[], int size);
 int main() {
-	int arr[10] = { 12,124,12,3,1,41,233,14,1,23 };
-	int i = 0;
-	int size = sizeof(arr) / sizeof(arr[0]);
-	printf("Before\n");
-	for (i = 0; i < size; i++) {
-		printf("%d ", arr[i]);
+	int arr[Size];
+	init(arr,Size);
+	for (int i = 0; i < Size; i++) {
+		scanf("%d", &arr[i]);
+	
 	}
-	printf("\n");
-	bubble_Up_sort(arr, size);
-	printf("After\n");
-	for (i = 0; i < size; i++) {
-		printf("%d ", arr[i]);
-	}
+	printf("Before:\n");
+	print(arr, Size);
+	reverse(arr, Size);
+	printf("After:\n");
+	print(arr, Size);
+
 	return 0;
 }
-void bubble_Up_sort(int arr[], int size) {
-	int count = 0;
+void init(int arr[], int size) {
 	int i = 0;
-	for (count=0; count < size - 1; count++) {
-		for (i=0; i < size - 1 - count; i++) {
-			int temp = 0;
-			if (arr[i] > arr[i + 1]) {
-				temp = arr[i];
-				arr[i] = arr[i + 1];
-				arr[i + 1] = temp;
-			}
-		}
-
+	for (i = 0; i < size; i++) {
+		arr[i] = 0;
 	}
 }
+void print(int arr[], int size) {
+	int i = 0;
+	for (i = 0; i < size; i++) {
+		printf("%d ", arr[i]);
+	
+	}
+	printf("\n");
+}
+void reverse(int arr[], int size) {
+	int i = 0;
+	for (i = 0; i < (size - 1) / 2; i++) {
+		int temp = 0;
+		temp = arr[i];
+		arr[i] = arr[size - 1 - i];
+		arr[size - 1 - i] = temp;
+	}
+
+
+}
+
+//******************************冒泡排序(increase/up)*****************************8
+//#include<stdio.h>
+//void bubble_Up_sort(int arr[], int size);
+//int main() {
+//	int arr[10] = { 12,124,12,3,1,41,233,14,1,23 };
+//	int i = 0;
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	printf("Before\n");
+//	for (i = 0; i < size; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	bubble_Up_sort(arr, size);
+//	printf("After\n");
+//	for (i = 0; i < size; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+//void bubble_Up_sort(int arr[], int size) {
+//	int count = 0;
+//	int i = 0;
+//	for (count=0; count < size - 1; count++) {
+//		for (i=0; i < size - 1 - count; i++) {
+//			int temp = 0;
+//			if (arr[i] > arr[i + 1]) {
+//				temp = arr[i];
+//				arr[i] = arr[i + 1];
+//				arr[i + 1] = temp;
+//			}
+//		}
+//
+//	}
+//}
