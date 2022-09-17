@@ -195,54 +195,44 @@
 
 //*****************************************最大公约数和最小公倍数之和*************************
 #include<stdio.h>
-int Max_Common(int a, int b);
-int Min_Common(int a, int b);
+long  long Max(long long, long long);
+long long Min(long long, long long);
 int main() {
-    int a = 0;
-    int b = 0;
-    scanf("%d%d", &a, &b);
-    int Max = Max_Common(a, b);
-    int Min = Min_Common(a, b);
-    printf("%d", Max+Min);
+    long long a = 0;
+    long long b = 0;
+    scanf("%lld%lld", &a, &b);
+    long long Max_Common = Max(a, b);
+    long long Min_Common = Min(a, b);
+    printf("%lld", Max_Common + Min_Common);
     return 0;
 }
-int Max_Common(int a, int b) {
-
-    if (b >= a) {
-        int count = 0;
-        for ( count = a;; count--) {
-            if (0 == a % count && 0 == b % count)
-                break;
+long long Max(long long a, long long b) {
+    if (a > b) {
+        for (long long i = b; i > 0; i--) {
+            if (0 == b % i && 0 == a % i)
+                return i;
         }
-        return count;
     }
-    else if (a > b) {
-        int count = 0;
+    for (long long i = a; i > 0; i--) {
+        if (0 == b % i && 0 == a % i)
+            return i;
+    }
 
-        for (int count = b;; count--) {
-            if (0 == a % count && 0 == b % count)
-                break;
-        }
-        return count;
-    }
+    return 0;
 
 }
-int Min_Common(int a, int b) {
+long long Min(long long a, long long b) {
+    if (a > b) {
+        for (long  long i = a;; i++) {
+            if (0 == i % a && 0 == i % b)
+                return i;
+        }
+    }
+    for (long long i = a;; i++) {
+        if (0 == i % a && 0 == i % b)
+            return i;
+    }
+    return 0;
 
-    if (a >= b) {
-        int count = 0;
-        for (count = a;; count++) {
-            if (0 == a % count && 0 == b % count)
-                break;
-        }
-        return count;
-    }
-    else if (b > a) {
-        int count = 0;
-        for (count = b;; count++) {
-            if (0 == count%a && 0 == count%b)
-                break;
-        }
-        return count;
-    }
+
 }
