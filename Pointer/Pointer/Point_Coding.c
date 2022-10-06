@@ -116,34 +116,34 @@
 //}
 
 ////*****************************水仙花数**************************************
-//#include<stdio.h>
-//
-//int per_dit(int);
-//
-//int main() {
-//
-//	int input = 0;
-//
-//	for (input = 0; input <= 10000; input++) {
-//
-//		per_dig(input);
-//
-//		if (per_dig(input) == input)printf("%d\n", input);
-//
-//	}
-//
-//	return 0;
-//}
-//
-//int per_dig(int input) {
-//
-//	int per_sum = 0;
-//
-//	if (input < 10)return input;
-//
-//	else return per_sum + per_dig(input / 10);
-//
-//}
+#include<stdio.h>
+#include<math.h>
+int per(int);
+int water(int, int);
+int main() {
+	for (int i = 1; i <100000; i++) {
+		if(i==water(i,per(i)))printf("%d ",i);
+	}
+	
+	return 0;
+}
+int per(int i) {
+	int count = 1;
+	for (count = 1; i > 9; count++) {
+		i /= 10;
+	}
+	return count;
+}
+int water(int i, int per) {
+	int sum = 0;
+	for (int count = 0; count < per; count++) {
+		
+		sum += pow(i % 10, per);
+		i /= 10;
+	}
+	return sum;
+
+}
 //*******************************求前五项的和，a+aa+aaa+aaaa+aaaaa
 //#include<stdio.h>
 //
