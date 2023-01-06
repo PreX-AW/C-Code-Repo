@@ -163,62 +163,75 @@
 //}
 
 //**************************guess number******************************
-#include<stdio.h>
-#include<time.h>
-#include<stdlib.h>
-#include<windows.h>
-void menu();
-void game();
-int main() {
-	int input = 0;
-	srand((unsigned int)time(NULL));
-	//选择是否游戏
-	//使用do while循环，保证至少执行一次循环
-	do {
-		menu();
-		scanf("%d", &input);
-		system("cls");
-		switch (input) {
-		case 1:
-			game(); break;
-		case 0:
-			break;
-		default:
-			printf("error input,please input select correct number again\n");
-			break;
-		}
-	} while (input);
-
-	return 0;
-}
-void menu() {
-	printf("Plese input select code :> \n");
-	printf("***************************\n");
-	printf("*******    1.Play   *******\n");
-	printf("*******    0.Exit   *******\n");
-	printf("***************************\n");
-	printf("***************************\n");
-}
-
-void game() {
-	int target = rand() % 100;
-	int guess = 0;
-	printf("Plese input the number you gusee :>\n");
-	scanf("%d", &guess);
-	while (guess - target) {
-		
-	
-		if (guess > target) {
-			printf("your guess>target,please input yourguess number again :> \n");
-		}
-		if (guess < target) {
-			printf("your guess<target,please input yourguess number again :> \n");
-		}
-		scanf("%d", &guess);
-	}
-
-		printf("conguratulation! you are right!\n");
-		return 0;
-	
-
-}
+//#include<stdio.h>
+//#include<time.h>
+//#include<stdlib.h>
+//#include<windows.h>
+//void menu();
+//void game();
+//int main() {
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	//选择是否游戏
+//	//使用do while循环，保证至少执行一次循环
+//	do {
+//		menu();
+//		scanf("%d", &input);
+//		system("cls");
+//		switch (input) {
+//		case 1:
+//			game(); break;
+//		case 0:
+//			break;
+//		default:
+//			printf("error input,please input select correct number again\n");
+//			break;
+//		}
+//	} while (input);
+//
+//	return 0;
+//}
+//void menu() {
+//	printf("Plese input select code :> \n");
+//	printf("***************************\n");
+//	printf("*******    1.Play   *******\n");
+//	printf("*******    0.Exit   *******\n");
+//	printf("***************************\n");
+//	printf("***************************\n");
+//}
+//
+//void game() {
+//	int target = rand() % 100;
+//	int guess = 0;
+//	printf("Plese input the number you gusee :>\n");
+//	scanf("%d", &guess);
+//	while (guess - target) {
+//		
+//	
+//		if (guess > target) {
+//			printf("your guess>target,please input yourguess number again :> \n");
+//		}
+//		if (guess < target) {
+//			printf("your guess<target,please input yourguess number again :> \n");
+//		}
+//		scanf("%d", &guess);
+//	}
+//
+//		printf("conguratulation! you are right!\n");
+//		return 0;
+//	
+//
+//}
+////**************************1/1-1/2+1/3-1/4.........-1/100**********************
+//#include<stdio.h>
+//int main() {
+//	float sum = 0;
+//	int times = 0;
+//	int sign = 1;
+//	for (times = 1; times <= 100; times++) {
+//		sum += sign * (1.0 / times);
+//		sign *= -1;
+//	}
+//	printf("%f", sum);
+//	return 0;
+//}
