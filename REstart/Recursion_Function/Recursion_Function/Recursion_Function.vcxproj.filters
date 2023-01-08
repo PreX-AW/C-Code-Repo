@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Function.c">
+    <ClCompile Include="Recursion_Function.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
