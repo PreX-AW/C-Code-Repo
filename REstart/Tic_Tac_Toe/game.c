@@ -136,9 +136,12 @@ void game() {
 			printf("You and computer are champion!\n");
 			break;
 		}
-	
+		system("cls");
+
 	
 		display_board();
+	
+
 		com_pin();
 		if ('*' == is_winner()) {
 			printf("You beat the computer!\n");
@@ -152,8 +155,9 @@ void game() {
 			printf("You and computer are champion!\n");
 			break;
 		}
-		display_board();
 
+		system("cls");
+		display_board();
 	}
 	display_board();
 
