@@ -205,11 +205,145 @@
 
 
 //**************************fibonacci_recursion_sort************************
-#include<stdio.h>
-int main() {
-	int input = 0;
-	printf("please input the number you wanna figure out it's fibonacci:>\n");
-	scanf("%d", &input);
-	printf("%d", fib_recursion(input));
-	return 0;
-}
+//#include<stdio.h>
+//int fib_recursion(int);
+//int main() {
+//	int input = 0;
+//	printf("please input the number you wanna figure out it's fibonacci:>\n");
+//	scanf("%d", &input);
+//	printf("%d", fib_recursion(input));
+//	return 0;
+//}
+//int fib_recursion(int input) {
+//	if (input < 3)return 1;
+//	else return fib_recursion(input - 1) + fib_recursion(input - 2);
+//}
+
+//***********************************fibnocci_alternate**********************************
+//#include<stdio.h>
+//int fib_alternate(int);
+//int main() {
+//	int input = 0;
+//	printf("please input the number you wanna figure out it's fibonacci:>\n");
+//	scanf("%d", &input);
+//	printf("%d", fib_alternate(input));
+//	return 0;
+//}
+//int fib_alternate(int input) {
+//	static  int a = 1;
+//	static  int b = 1;
+//	static int c = 1;
+//	while (input > 2) {
+//		c = a + b;
+//		a = c;
+//		b = a;
+//		input--;
+//	}
+//	return c;
+//}
+
+//*************************************************n to power of k**********************************
+//#include<stdio.h>
+//int power(int,int);
+//int main() {
+//	int n = 0;
+//	int k = 0;
+//	printf("please input the number and k index you wanna figure out it's power:>\n");
+//	scanf("%d%d", &n,&k);
+//	printf("%d", power(n,k));
+//	return 0;
+//}
+//int power(int n,int k) {
+//	if (k > 0)return power(n,k-1) * n;
+//	else return 1;
+//
+//}
+
+//*************************each_number_sum******************************
+//#include<stdio.h>
+//int each_sum(int);
+//int main() {
+//	int input = 0;
+//	printf("please input the number you wanna figure each number sum:>\n");
+//	scanf("%d", &input);
+//	printf("%d", each_sum(input));
+//	return 0;
+//
+//}
+//int each_sum(int input) {
+//	if (input > 9)return each_sum(input / 10) + input % 10;
+//	else return input;
+//	
+//}
+
+//*************************************string_reverse**************************
+//#include<stdio.h>
+//char* reverse_string(char*);
+//int main() {
+//	char arr[20] = "";
+//	int size = 0;
+//	printf("please intput arr you wanna reverse print:>\n");
+//	scanf("%s", arr);
+//	printf("%s",reverse_string(arr));
+//	return 0;
+//}
+//char* reverse_string(char* arr) {
+//	int length = my_strlen(arr);
+//	char temp = '0';
+//	if(length>1)
+//
+//	
+//}
+//int my_strlen(char* arr) {
+//	if ('\0' == *arr)return 0;
+//	else return my_strlen(arr + 1) + 1;
+//	
+//}
+
+//************************************sum_N_number*******************
+//#include <stdio.h>
+//
+//int main() {
+//	int N = 0;
+//	scanf("%d", &N);
+//	int i = 0;
+//	int sum = 0;
+//	int count = 0;
+//	for (i = 0; i < N; i++) {
+//		scanf("%d", &count);
+//		sum += count;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//**************************************sum 1 to n**************************
+//#include <stdio.h>
+//
+//int main() {
+//	long sum = 0;
+//	long n = 0;
+//	scanf("%ld", &n);
+//	long count = 0;
+//	for (count = 0; count < n; count++) {
+//		sum += count + 1;
+//	}
+//	printf("%ld", sum);
+//	return 0;
+//}
+//****************************my_strlen***************************
+//#include<stdio.h>
+//int my_strlen(char*);
+//int main() { 
+//	char arr[20] = "";
+//	printf("Please input the arr you wanna figure out it lengthen:>\n");
+//	scanf("%s", arr);
+//	printf("arr lengthen is %d.\n", my_strlen(arr));
+//	
+//	
+//	return 0; }
+//int my_strlen(char* arr) {
+//	if ('\0' == *arr)return 0;
+//	else return my_strlen(arr + 1) + 1;
+//	
+//}
