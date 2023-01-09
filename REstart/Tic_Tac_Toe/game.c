@@ -129,7 +129,7 @@ void game() {
 			break;
 		}
 		if ('#' == is_winner()) {
-			printf("You beat the computer!\n");
+			printf("Sorry,you failed!\n");
 			break;
 		}
 		if ('Q' == is_winner()) {
@@ -145,7 +145,7 @@ void game() {
 			break;
 		}
 		if ('#' == is_winner()) {
-			printf("You beat the computer!\n");
+			printf("Sorry,you failed!\n");
 			break;
 		}
 		if ('Q' == is_winner()) {
@@ -155,5 +155,6 @@ void game() {
 		display_board();
 
 	}
-	
+	display_board();
+
 }
